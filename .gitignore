@@ -1,5 +1,5 @@
 *.daylio
-*.daylio-converted.json
+*.daylio-converted.json*
 *.daylio.json
 *.daylio-pretty.json
 Pixels backup*.json
