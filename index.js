@@ -7,11 +7,11 @@ moment().format();
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv))
-    .command('daylio', 'Pretty-prints the contents of your Daylio backup file to a `.json` file.')
-    .example('$0 -d mybackup.daylio', 'Pretty-prints the contents of your Daylio backup file to `./mybackup.daylio.json`.')
+    .command('daylio', 'Converts the log entries contained within your Daylio backup file to a `.json` file compatible with Year in Pixels.')
+    .example('$0 -d mybackup.daylio', 'Converts your Daylio backup file at `./mybackup.daylio` to a Year in Pixels JSON file at `./mybackup.daylio-converted.json`.')
     .alias('d', 'daylio')
-    .command('pixels', 'Pretty-prints the contents of your Year in Pixels backup file to a `.json` file.')
-    .example('$0 -p pixels-backup.json', 'Pretty-prints the contents of your Year in Pixels backup file to `./pixels-backup.json.pretty.json`.')
+    .command('pixels', 'Converts the log entries contained within your Year in Pixels backup file to a `.daylio` file compatible with Daylio.')
+    .example('$0 -p pixels-backup.json', 'Converts your Year in Pixels backup file at `./pixels-backup.json` to a Daylio file at `./pixels-backup.json-converted.daylio`.')
     .alias('p', 'pixels')
     .help('h')
     .alias('h', 'help')
