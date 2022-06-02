@@ -19,7 +19,7 @@ const argv = yargs(hideBin(process.argv))
         if ((argv.daylio && !argv.pixels) || (!argv.daylio && argv.pixels)) {
             return true;
         } else {
-            throw (new Error('Pass the path to your Daylio backup file *or* your Year in Pixels backup file!'));
+            throw (new Error('Pass the path to your Daylio backup file *or* your Year in Pixels backup file - not both!'));
         }
     })
     .argv;
@@ -108,14 +108,14 @@ const convertFromDaylioToPixels = async () => {
     };
     console.log(`Converted ${daylioJSON.dayEntries.length} Daylio entries to Year in Pixels entries!\n`);
 
-    const outputYearInPixelsJSONFilename = `${argv.daylio}-converted.json`;
-    console.log(`Writing \`${outputYearInPixelsJSONFilename}\`...`);
+    const outputPixelsJSONFilename = `${argv.daylio}-converted.json`;
+    console.log(`Writing \`${outputPixelsJSONFilename}\`...`);
     try {
-        await fsPromises.writeFile(outputYearInPixelsJSONFilename, JSON.stringify(pixelsJSON));
+        await fsPromises.writeFile(outputPixelsJSONFilename, JSON.stringify(pixelsJSON));
     } catch (err) {
         console.log(err);
     }
-    console.log(`Wrote \`${outputYearInPixelsJSONFilename}\`!\n`);
+    console.log(`Wrote \`${outputPixelsJSONFilename}\`!\n`);
     console.log("Successfully converted from Daylio backup data to Year in Pixels backup data!");
 
     // Uncomment the lines below to write a pretty-printed version of the Daylio backup JSON to disk.

@@ -1,5 +1,5 @@
 # year-in-pixels-to-daylio
-Converts data exported from the Year in Pixels app to a format importable into the Daylio app - and the other way around!
+This NodeJS script converts data exported from [the "Pixels - Mood & Mental Health" Android/iOS app](https://teovogel.me/pixels/) to a format compatible with [the Daylio Android/iOS app](https://daylio.net/) - and the other way around!
 
 ## Prerequisites
 1. Ensure NodeJS is installed.
