@@ -1,0 +1,24 @@
+{
+  "name": "year-in-pixels-to-daylio",
+  "version": "1.0.0",
+  "description": "Converts data exported from the Year in Pixels app to be imported into the Daylio app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zfox23/year-in-pixels-to-daylio.git"
+  },
+  "author": "Zach Fox",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/zfox23/year-in-pixels-to-daylio/issues"
+  },
+  "homepage": "https://github.com/zfox23/year-in-pixels-to-daylio#readme",
+  "dependencies": {
+    "jszip": "^3.10.0",
+    "moment": "^2.29.3",
+    "yargs": "^17.5.1"
+  }
+}
